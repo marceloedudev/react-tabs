@@ -1,0 +1,17 @@
+.#{$rt-namespace}__button {
+    position: relative;
+    background: transparent;
+    border: none;
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    &:disabled {
+        cursor: not-allowed;
+        border: none;
+    }
+    &--checked {
+        font-weight: bold;
+    }
+}

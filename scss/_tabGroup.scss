@@ -1,0 +1,12 @@
+.#{$rt-namespace}__tabGroup {
+    width: 100%;
+    position: relative;
+    & .tab-label {
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        list-style: none;
+    }
+    & .tab-content {
+        margin: 10px 0;
+    }
+}

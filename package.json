@@ -1,0 +1,74 @@
+{
+    "version": "0.1.0",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "engines": {
+        "node": ">=10"
+    },
+    "scripts": {
+        "start": "tsdx watch",
+        "build": "tsdx build",
+        "test": "tsdx test --passWithNoTests",
+        "lint": "tsdx lint",
+        "prepare": "tsdx build",
+        "size": "size-limit",
+        "analyze": "size-limit --why",
+        "sass": "sass scss/main.scss dist/ReactTabs.css"
+    },
+    "peerDependencies": {
+        "react": ">=16"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "tsdx lint"
+        }
+    },
+    "prettier": {
+        "printWidth": 80,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5"
+    },
+    "name": "react-tabs",
+    "module": "dist/react-tabs.esm.js",
+    "size-limit": [{
+            "path": "dist/react-tabs.cjs.production.min.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/react-tabs.esm.js",
+            "limit": "10 KB"
+        }
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.15.0",
+        "@size-limit/preset-small-lib": "^5.0.3",
+        "@storybook/addon-essentials": "^6.3.7",
+        "@storybook/addon-info": "^5.3.21",
+        "@storybook/addon-links": "^6.3.7",
+        "@storybook/addons": "^6.3.7",
+        "@storybook/react": "^6.3.7",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^12.0.0",
+        "@types/react": "^17.0.17",
+        "@types/react-dom": "^17.0.9",
+        "@types/styled-components": "^5.1.12",
+        "babel-loader": "^8.2.2",
+        "clsx": "^1.1.1",
+        "husky": "^7.0.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-is": "^17.0.2",
+        "sass": "^1.37.5",
+        "size-limit": "^5.0.3",
+        "styled-components": "^5.3.0",
+        "tsdx": "^0.14.1",
+        "tslib": "^2.3.1",
+        "typescript": "^4.3.5"
+    }
+}
