@@ -42,21 +42,15 @@ export const TabGroup: React.FC<ITabs> = ({
   const RenderTabs = () => {
     return (
       <>
-        {children?.map((child: any, index: number) => {
-          return (
-            <child.type
-              key={child.key || `tab_${index}`}
-              ref={child.ref}
-              id={`tab_${index}`}
-              onClick={() => handleTabClick(index)}
-              isCurrentSelected={index === currentSelected}
-              width={widthTab}
-              height={heightTab}
-              {...child.props}
-            >
-              {child.props?.children}
-            </child.type>
-          );
+        {React.Children.map(children, (child, index) => {
+          return React.cloneElement(child, {
+            key: `tabgroup-${name}${index}`,
+            id: `tabgroup-${name}${index}`,
+            onClick: () => handleTabClick(index),
+            isCurrentSelected: index === currentSelected,
+            width: widthTab,
+            height: heightTab,
+          });
         })}
       </>
     );
@@ -64,7 +58,7 @@ export const TabGroup: React.FC<ITabs> = ({
 
   const RenderContent = () => {
     if (children?.[currentSelected]) {
-      return <>{children?.[currentSelected].props?.children}</>;
+      return <>{children?.[currentSelected]?.props?.children}</>;
     }
 
     return <>{children?.props?.children}</>;

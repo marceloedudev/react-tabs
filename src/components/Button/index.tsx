@@ -37,7 +37,6 @@ export const Button: React.FC<IButtonBase> = React.forwardRef(
       <button
         onClick={onClick}
         disabled={disabled}
-        data-testid="tab-button"
         type={'button'}
         ref={resolvedRef}
         id={id}

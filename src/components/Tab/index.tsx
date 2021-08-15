@@ -25,7 +25,7 @@ export const Tab: React.FC<ITab> = ({
   const classNames = clsx(defaultClassName);
 
   return (
-    <li className={classNames}>
+    <li className={classNames} id={`tab-${label}`}>
       <Button
         disabled={disabled}
         onClick={onClick}

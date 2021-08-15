@@ -11,7 +11,7 @@ type IIndicator = {
 export const Indicator: React.FC<IIndicator> = ({
   children,
   id,
-  color = '#427bf5',
+  color = `${Default.COLOR_INDICATOR}`,
   name,
 }) => {
   const refIndicator: React.MutableRefObject<any> = React.useRef(null);
@@ -28,7 +28,9 @@ export const Indicator: React.FC<IIndicator> = ({
 
   React.useEffect(() => {
     if (refIndicator.current && refContent.current && id >= 0) {
-      const tabElement = refContent.current.querySelectorAll(`li`) as any;
+      const tabElement = refContent.current.querySelectorAll(
+        `#tabgroup-${name}${id} li`
+      ) as any;
 
       const targetElement = tabElement[id];
 
@@ -49,7 +51,12 @@ export const Indicator: React.FC<IIndicator> = ({
           ref: refContent,
         });
       })}
-      <div ref={refIndicator} style={style} className={classNames} />
+      <div
+        ref={refIndicator}
+        id={`tabindicator-${name}${id}`}
+        style={style}
+        className={classNames}
+      />
     </>
   );
 };
