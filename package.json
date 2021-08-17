@@ -1,11 +1,14 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.3",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
         "dist",
-        "src"
+        "scss"
+    ],
+    "sideEffects": [
+        "*.css"
     ],
     "engines": {
         "node": ">=10"
@@ -15,7 +18,7 @@
         "build": "tsdx build",
         "test": "tsdx test --passWithNoTests",
         "lint": "tsdx lint",
-        "prepare": "tsdx build",
+        "prepare": "tsdx build && npm run sass",
         "size": "size-limit",
         "analyze": "size-limit --why",
         "sass": "sass scss/main.scss dist/ReactTabs.css"
@@ -34,7 +37,7 @@
         "singleQuote": true,
         "trailingComma": "es5"
     },
-    "name": "react-tabs",
+    "name": "@marceloedudev/react-tabs",
     "module": "dist/react-tabs.esm.js",
     "size-limit": [{
             "path": "dist/react-tabs.cjs.production.min.js",
@@ -57,7 +60,6 @@
         "@testing-library/react": "^12.0.0",
         "@types/react": "^17.0.17",
         "@types/react-dom": "^17.0.9",
-        "@types/styled-components": "^5.1.12",
         "babel-loader": "^8.2.2",
         "clsx": "^1.1.1",
         "husky": "^7.0.1",
@@ -66,9 +68,22 @@
         "react-is": "^17.0.2",
         "sass": "^1.37.5",
         "size-limit": "^5.0.3",
-        "styled-components": "^5.3.0",
         "tsdx": "^0.14.1",
         "tslib": "^2.3.1",
         "typescript": "^4.3.5"
+    },
+    "description": "React Tabs",
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marceloedudev/react-tabs.git"
+    },
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/marceloedudev/react-tabs/issues"
+    },
+    "homepage": "https://github.com/marceloedudev/react-tabs#readme",
+    "publishConfig": {
+        "access": "public"
     }
 }
