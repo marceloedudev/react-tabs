@@ -1,6 +1,5 @@
 import 'react-app-polyfill/ie11';
 import '../dist/ReactTabs.css';
-import './styles.css';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
