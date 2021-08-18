@@ -3,7 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 type IButtonBase = {
-  id: string;
+  id?: string;
   onClick?: (event: React.MouseEvent<any>) => void;
   disabled?: boolean;
   label?: string;

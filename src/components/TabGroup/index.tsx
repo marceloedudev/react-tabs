@@ -28,7 +28,7 @@ export const TabGroup: React.FC<ITabs> = ({
   const [currentSelected, setCurrentSelected] = useState(selected);
 
   const handleTabClick = React.useCallback(
-    (index) => {
+    index => {
       if (index !== currentSelected) {
         setCurrentSelected(index);
         if (onSelect) {
@@ -45,7 +45,6 @@ export const TabGroup: React.FC<ITabs> = ({
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, {
             key: `tabgroup-${name}${index}`,
-            id: `tabgroup-${name}${index}`,
             onClick: () => handleTabClick(index),
             isCurrentSelected: index === currentSelected,
             width: widthTab,

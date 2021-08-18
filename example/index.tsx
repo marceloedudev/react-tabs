@@ -46,7 +46,7 @@ const App = () => {
 
       <div>
         <TabGroup name="example2" selected={selected2} onSelect={setSelected2}>
-          {items.map((item) => (
+          {items.map(item => (
             <Tab key={item} label={item}>
               {item}
             </Tab>
@@ -57,7 +57,7 @@ const App = () => {
           name="name"
           type="text"
           value={stateInput.name}
-          onChange={(event) =>
+          onChange={event =>
             setStateInput({
               [event.target.name]: event.target.value,
             })
@@ -67,8 +67,8 @@ const App = () => {
         <button
           type="button"
           onClick={() => {
-            setItems((oldState) => [...oldState, stateInput.name]);
-            setStateInput((oldState) => ({ ...oldState, name: '' }));
+            setItems(oldState => [...oldState, stateInput.name]);
+            setStateInput(oldState => ({ ...oldState, name: '' }));
             setSelected2(items.length);
           }}
         >

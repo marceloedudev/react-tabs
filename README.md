@@ -1,5 +1,12 @@
 # React Tabs
 
+## Installation
+
+```
+$ npm i @marceloedudev/react-tabs
+$ yarn add @marceloedudev/react-tabs
+```
+
 Example
 
 ```tsx

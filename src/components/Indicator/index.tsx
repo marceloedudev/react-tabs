@@ -28,9 +28,7 @@ export const Indicator: React.FC<IIndicator> = ({
 
   React.useEffect(() => {
     if (refIndicator.current && refContent.current && id >= 0) {
-      const tabElement = refContent.current.querySelectorAll(
-        `#tabgroup-${name}${id} li`
-      ) as any;
+      const tabElement = refContent.current.querySelectorAll(`li`) as any;
 
       const targetElement = tabElement[id];
 
@@ -47,7 +45,6 @@ export const Indicator: React.FC<IIndicator> = ({
       {React.Children.map(children, (child: any, index) => {
         return React.cloneElement(child, {
           key: `tabgroup-${name}${index}`,
-          id: `tabgroup-${name}${id}`,
           ref: refContent,
         });
       })}

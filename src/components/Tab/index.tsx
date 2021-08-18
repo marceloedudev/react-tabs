@@ -30,7 +30,6 @@ export const Tab: React.FC<ITab> = ({
         disabled={disabled}
         onClick={onClick}
         label={label}
-        id={`tabitem-${label}`}
         checked={!!isCurrentSelected}
         width={width}
         height={height}
