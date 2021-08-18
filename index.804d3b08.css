@@ -1,0 +1,46 @@
+.RTabs__button {
+  position: relative;
+  background: transparent;
+  border: none;
+  user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+}
+.RTabs__button:disabled {
+  cursor: not-allowed;
+  border: none;
+}
+.RTabs__button--checked {
+  font-weight: bold;
+}
+
+.RTabs__tabGroup {
+  width: 100%;
+  position: relative;
+}
+.RTabs__tabGroup .tab-label {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.RTabs__tabGroup .tab-content {
+  margin: 10px 0;
+}
+
+.RTabs__tab :not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.RTabs__indicator {
+  position: absolute;
+  width: auto;
+  left: 0;
+  transition: all 500ms ease;
+}
+
+
+/*# sourceMappingURL=index.804d3b08.css.map */
